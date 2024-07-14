@@ -1,0 +1,54 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block title %}
+Categories
+{% endblock %}
+
+{% block content %}
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url({% static 'images/bg-01.jpg' %});">
+    <h2 class="ltext-105 cl0 txt-center">
+        Catégories De Produits
+    </h2>
+</section>
+
+
+<!-- Banner -->
+<div class="sec-banner bg0 p-t-80 p-b-50">
+    <div class="container">
+        <div class="row">
+
+            {% for categorie in categories %}
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <div class="block1 wrap-pic-w">
+                    <img src="{{categorie.image.url}}" alt="IMG-BANNER">
+
+                    <a href="{% url 'produits' %}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                {{categorie.nom}}
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Voir les produits
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block title %}
+Apropos
+{% endblock %}
+
+{% block content %}
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url({% static 'images/bg-01.jpg' %});">
+    <h2 class="ltext-105 cl0 txt-center">
+        A Propos
+    </h2>
+</section>
+<!-- Content page -->
+<section class="bg0 p-t-75 p-b-120">
+    <div class="container">
+        <div class="row p-b-148">
+            <div class="col-md-7 col-lg-8">
+                <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16">
+                        Notre Histoire
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Bienvenue chez L&H, votre destination de choix pour des produits de qualité. Fondée avec passion, notre entreprise a pour mission de vous offrir une expérience d'achat unique et agréable. Chez L&H, nous croyons en l'importance de l'excellence et du service client. Nous nous efforçons de sélectionner les meilleurs produits pour répondre à vos besoins et surpasser vos attentes.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Depuis notre création, nous avons évolué en restant fidèles à nos valeurs fondamentales : intégrité, innovation et engagement envers nos clients. Nous sommes fiers de notre parcours et des relations durables que nous avons établies avec nos clients et partenaires.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Si vous avez des questions, n'hésitez pas à nous contacter en magasin au 8ème étage, 379 Hudson St, New York, NY 10018 ou appelez-nous au (+1) 96 716 6879. Nous sommes impatients de vous servir et de vous aider à trouver exactement ce que vous cherchez.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+                <div class="how-bor1 ">
+                    <div class="hov-img0">
+                        <img src="{% static "images/about-01.jpg" %}" alt="IMG">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="order-md-2 col-md-7 col-lg-8 p-b-30">
+                <div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16">
+                        Notre Mission
+                    </h3>
+                
+                    <p class="stext-113 cl6 p-b-26">
+                        Chez L&H, notre mission est de fournir des produits de qualité exceptionnelle tout en garantissant une expérience d'achat inégalée. Nous nous engageons à offrir à nos clients un service personnalisé et attentif, répondant à leurs besoins et attentes avec précision et souci du détail. Notre objectif est de créer un environnement où chaque client se sent valorisé et satisfait de ses achats.
+                    </p>
+                
+                    <p class="stext-113 cl6 p-b-26">
+                        Nous croyons fermement en l'innovation continue et en l'amélioration constante de nos processus et de notre gamme de produits. Nous nous efforçons de rester à la pointe des tendances et des technologies pour vous offrir les meilleures solutions possibles. Chez L&H, nous sommes dévoués à bâtir une relation de confiance avec nos clients, basée sur la transparence, l'intégrité et la qualité.
+                    </p>
+                
+                    <div class="bor16 p-l-29 p-b-9 m-t-22">
+                        <p class="stext-114 cl6 p-r-40 p-b-11">
+                            "La créativité, c'est simplement relier les choses. Lorsque vous demandez à des personnes créatives comment elles ont fait quelque chose, elles se sentent un peu coupables parce qu'elles ne l'ont pas vraiment fait, elles ont juste vu quelque chose. Cela leur semblait évident après un certain temps."
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
+                <div class="how-bor2">
+                    <div class="hov-img0">
+                        <img src="{% static "images/about-02.jpg" %}" alt="IMG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>	
+
+
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}

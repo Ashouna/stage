@@ -1,0 +1,53 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block title %}
+Profil
+{% endblock %}
+
+{% block content %}
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url({% static 'images/bg-01.jpg' %});">
+    <h2 class="ltext-105 cl0 txt-center">
+        Profil
+    </h2>
+</section>
+<!-- Content page -->
+<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr w-100">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md col-12">
+                <form method="POST" action=".">
+                    {% csrf_token %}
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Modification de votre profil
+                    </h4>
+                    {% for field in form %}
+                    <label>{{field.label}}</label>
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        {{field}}
+                    </div>
+                    {% if field.errors %}
+                    <div class="alert alert-danger">
+                        {{field.errors}}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+                    <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                        Modifier
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock %}
