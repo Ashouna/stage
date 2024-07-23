@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from utilisateur.forms import UtilisateurChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from boutique.models import Panier
 
 
 def validerconnexion(request: HttpRequest):
@@ -84,6 +85,9 @@ def validerinscription(request:HttpRequest):
             new_user.adresse = adresse
             new_user.set_password(mdp) 
             new_user.save()
+            new_userPanier = Panier()
+            new_userPanier.utilisateur = new_user
+            new_userPanier.save()
             return redirect("/connexion/")
         
             

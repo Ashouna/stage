@@ -15,5 +15,13 @@ urlpatterns = [
     path("produits/", produits, name="produits"),
     path("produits/<int:id>/", produit, name="produit-detail"),
     path("auth/", include("auth_gateway.urls")),
+    path("panier/", panier, name="panier"),
+    path("viderpanier/", viderpanier, name="viderpanier"),
+    path("validerajoutpanier/", validerajoutpanier, name="validerajoutpanier"),
+    path("procederpaiement/", procederpaiement, name="procederpaiement"),
+    path("procederpaiement/webhook/", procederpaiementwebhook, name="procederpaiementwebhook"),    
+    path("paiementannuler/", paiementannuler, name="paiementannuler"),
+    path("paiementeffectuer/", paiementeffectuer, name="paiementeffectuer"),
+
     
 ]
